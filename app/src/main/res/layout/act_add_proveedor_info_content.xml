@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.towpod.actAddProveedorInfo"
+    tools:showIn="@layout/act_add_proveedor_info"
+    android:clipToPadding="false">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_alignParentTop="true"
+
+        android:layout_above="@+id/linearLayout"
+        android:clipToPadding="false">
+
+        <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabHost"
+            android:background="?attr/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/tabContainer"
+                android:clipToPadding="false">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none"
+                    android:clipToPadding="false"
+                    android:elevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clipToPadding="false">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:tabStripEnabled="false"
+                            android:orientation="horizontal"
+                            android:background="?attr/colorPrimary"
+                            android:padding="0dp"
+                            android:dividerPadding="4dip"
+                            android:elevation="4dp"></TabWidget>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:background="#f2f2f2">
+
+                    <LinearLayout
+                        android:id="@+id/tabDatos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:clipToPadding="false">
+
+                        <include layout="@layout/act_add_proveedor_info_tab_datos"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent" />
+
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:id="@+id/tabHorarios"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/act_add_proveedor_info_tab_horarios" />
+
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                    android:id="@+id/tabPagos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                        android:clipToPadding="false">
+
+                    <include layout="@layout/act_add_proveedor_info_tab_pagos" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabServicios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:clipToPadding="false">
+
+                    <include layout="@layout/act_add_proveedor_info_tab_servicios" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:clipToPadding="false">
+
+                    <include layout="@layout/act_add_proveedor_info_tab_mapa" />
+
+                </LinearLayout>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </TabHost>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+
+        android:padding="10sp"
+        android:background="@color/colorDarkGray"
+        android:elevation="24dp"
+        android:clipToPadding="false">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GUARDAR"
+            android:id="@+id/btnGuardar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:onClick="btnGuardar"
+            style="@style/Widget.AppCompat.Button.Colored" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+

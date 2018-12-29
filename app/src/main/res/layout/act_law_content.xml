@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipToPadding="false">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:contentDescription="Buscar"
+        app:closeIcon="@android:drawable/ic_menu_close_clear_cancel"
+        app:commitIcon="@drawable/common_google_signin_btn_icon_dark_normal"
+        app:goIcon="@drawable/cariconpolicy"
+        app:searchHintIcon="@android:drawable/ic_search_category_default"
+        app:searchIcon="@android:drawable/ic_menu_search"
+        android:showDividers="beginning|middle|end"
+        style="@android:style/Widget.Material.SearchView" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

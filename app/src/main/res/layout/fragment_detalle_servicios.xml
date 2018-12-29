@@ -1,0 +1,192 @@
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LayoutMetodosPago">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Métodos de pago aceptados"
+                    android:id="@+id/textView234"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--METODO DE PAGO: TARJETA-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/loCash"
+                        android:layout_weight=".33"
+                        android:visibility="invisible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="0dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:src="@drawable/paymentcash"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Efectivo"
+                                android:id="@+id/textView26"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimary" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".33"
+                        android:id="@+id/loCard"
+                        android:visibility="invisible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="0dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:id="@+id/imageView6"
+                                android:src="@drawable/paymentcard"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="40dp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Tarjeta C/D"
+                                android:id="@+id/textView25"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimary" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--METODO DE PAGO: EFECTIVO-->
+
+                    <!--METODO DE PAGO: CHEQUE-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/loCheck"
+                        android:layout_weight=".33"
+                        android:visibility="invisible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="0dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:src="@drawable/paymentcheck"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Cheque"
+                                android:id="@+id/textView27"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimary" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--LISTADO DE SERVICIOS-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Servicios ofrecidos"
+                        android:id="@+id/textView23"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary" />
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/ListViewCategorias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dividerHeight="0sp"
+                    android:fastScrollEnabled="false"
+                    android:horizontalSpacing="0sp"
+                    android:numColumns="2"
+                    android:padding="3sp"
+                    android:verticalSpacing="0sp"></GridView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>

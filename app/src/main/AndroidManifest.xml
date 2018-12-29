@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.towpod">
+
+    <!-- ============================================================================= -->
+    <!-- PERMISOS QUE REQUIERE LA APP================================================= -->
+    <!-- ============================================================================= -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permite a la API usar el GPS para determinar nuestra localización con precisión. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Permite a la API utilizar la WiFi o los datos móviles (o ambos) para determinar nuestra localización. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Permite a la API utilizar proveedores adicionales para determinar nuestra localización. -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- Permite a la API comprobar el estado de la conexión para ver si puede descargar datos. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Permite a la API almacenar en cache datos del mapa en la SD. -->
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- Permiten acceder a la información de la cuenta Gmail registrada en el dispositivo. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <!-- ============================================================================= -->
+    <!-- Permiten acceder a la NOTIFICACIN PUSH. -->
+    <permission
+        android:name="net.towpod.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="danielirias.helpmech.permission.C2D_MESSAGE" />
+
+    <!-- ============================================================================= -->
+    <!-- ============================================================================= -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".actMainLogin"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+            <!-- Daniel irias -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actRegistration"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:parentActivityName=".actMainLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".actServiceDirectory"
+            android:label="Directorio de servicios"
+            android:launchMode="singleTop"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actListaProveedores"
+            android:label="Proveedores de servicio"
+            android:launchMode="singleTop"
+            android:parentActivityName=".actServiceDirectory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actServiceDirectory" />
+        </activity>
+        <activity
+            android:name=".actInfoProveedor"
+            android:label="Detalles"
+            android:parentActivityName=".actListaProveedores"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actListaProveedores" />
+        </activity>
+        <activity
+            android:name=".actMyAccount"
+            android:label="Mi cuenta"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".actAbout"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".actMyAccountStores"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".actGetHelpWithPolicy"
+            android:label="@string/title_activity_act_get_help_with_policy"
+            android:parentActivityName=".actGetHelp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actGetHelp" />
+        </activity>
+        <activity
+            android:name=".actGetHelp"
+            android:label="@string/title_activity_act_get_help_no_policy"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actGetHelpWithCard"
+            android:label="@string/title_activity_act_get_help_with_card"
+            android:parentActivityName=".actGetHelp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actGetHelp" />
+        </activity>
+        <activity
+            android:name=".actPolicyType"
+            android:label="@string/title_activity_act_policy_type"
+            android:parentActivityName=".actMyAccount"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMyAccount" />
+        </activity>
+        <activity
+            android:name=".actAddNewCar"
+            android:label="@string/title_activity_act_add_new_car"
+            android:parentActivityName=".actMyAccount"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMyAccount" />
+        </activity>
+        <activity
+            android:name=".actAddMyCard"
+            android:label="@string/title_activity_act_add_my_card"
+            android:parentActivityName=".actMyAccount"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMyAccount" />
+        </activity>
+        <activity android:name=".actTestLocation" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".actMyAccountPolicy"
+            android:label="@string/title_activity_act_my_account_policy"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actMyAccountCars"
+            android:label="@string/title_activity_act_my_account_cars"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actMyAccountMyCards"
+            android:label="@string/title_activity_act_my_account_my_cards"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actMyAccountHistory"
+            android:label="Historial de asistencias"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- PARA ABRIR DESDE UNA URL -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="open"
+                    android:scheme="dlhelpmec" />
+
+                <!--
+                Con la data siguiente podria usar http://www.danielirias.com/launch/helpmec
+                en la url del html y asi escoger entre abrir la app u otra URL en el browser
+                -->
+                <!--
+                    <data
+                    android:host="www.danielirias.com"
+                    android:path="/launch/helpmec"
+                    android:scheme="http" />
+                -->
+
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actLaw"
+            android:label="@string/title_activity_act_law"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actMyAccountHistoryDetail"
+            android:label="@string/title_activity_act_history_detail"
+            android:parentActivityName=".actMyAccountHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMyAccountHistory" />
+        </activity>
+        <activity
+            android:name=".actCarDetail"
+            android:label="@string/title_activity_act_car_detail"
+            android:parentActivityName=".actMyAccountCars"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMyAccountCars" />
+        </activity>
+        <activity
+            android:name=".actMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".actCurrentLocation"
+            android:label="@string/title_activity_act_current_location"
+            android:parentActivityName=".actMainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+        </activity>
+        <activity
+            android:name=".actDestination"
+            android:label="@string/title_activity_act_destination"
+            android:parentActivityName=".actCurrentLocation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actCurrentLocation" />
+        </activity>
+        <activity
+            android:name=".actMyAccountHistoryDetailDriver"
+            android:label="@string/title_activity_act_my_account_history_detail_driver"
+            android:parentActivityName=".actMyAccountHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMyAccountHistory" />
+        </activity>
+        <activity
+            android:name=".actQuotationList"
+            android:label="@string/title_activity_act_quotation_list"
+            android:parentActivityName=".actMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.towpod.actMainActivity" />
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="towpod.net"
+                    android:pathPrefix="/open-quotation-list"
+                    android:scheme="http" />
+                <data
+                    android:host="towpod.net"
+                    android:pathPrefix="/open-quotation-list"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actPaypalPayment"
+            android:label="@string/title_activity_act_paypal_payment"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="fill_vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#bec3c7">
+
+                    <RelativeLayout
+                        android:layout_width="80sp"
+                        android:layout_height="80sp"
+                        android:id="@+id/rlCatIcon"
+                        android:background="@drawable/customcatbg"
+                        android:padding="0dp">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/userwhite"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".66"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/txtUnidad"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_alignTop="@+id/txtDistancia"
+                            android:layout_toEndOf="@+id/txtDistancia"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textStyle="bold"
+                            android:shadowColor="#212121"
+                            android:textColor="?attr/colorPrimary"
+                            android:text="Daniel Irias Gutierrez"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Póliza de seguro"
+                            android:id="@+id/Label0"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5sp"
+                            android:textColor="?attr/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/Label1"
+                            android:text="Número de póliza"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/Label0"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="?attr/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtEstadoPoliza"
+                            android:text="VIGENTE"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_gravity="right"
+                            android:layout_below="@+id/Label1"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@+id/Label2"
+                            android:layout_alignStart="@+id/txtNumeroPoliza"
+                            android:textAlignment="textEnd" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/Label2"
+                            android:text="Estado"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/Label1"
+                            android:textColor="?attr/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtFechaVencimiento"
+                            android:text="25-Abr-2017"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_gravity="right"
+                            android:layout_below="@+id/Label2"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/Label3"
+                            android:text="Vencimiento"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="?attr/colorPrimaryDark"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtNumeroPoliza"
+                            android:textColor="?attr/colorAccent"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_gravity="right"
+                            android:text="2017HN-722Q"
+                            android:layout_above="@+id/txtEstadoPoliza"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/ListViewAutos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fastScrollEnabled="true"
+                    android:verticalSpacing="0sp"
+                    android:horizontalSpacing="0sp"
+                    android:dividerHeight="0sp"
+                    android:divider="#FFF"
+                    android:background="#f2f2f2">
+                </ListView>
+
+            </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

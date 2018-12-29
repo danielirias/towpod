@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ListViewComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:fastScrollEnabled="false"
+            android:verticalSpacing="0sp"
+            android:horizontalSpacing="0sp"
+            android:padding="0sp"
+            android:background="#F2F2F2"
+            android:contextClickable="false">
+        </ListView>
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

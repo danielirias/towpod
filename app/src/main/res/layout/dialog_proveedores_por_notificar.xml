@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:text="Solicitud de asistencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:id="@+id/textView30"
+            android:textStyle="normal|bold"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:text="Proveedores que serán notificados:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ListView_Proveedores"
+            android:verticalSpacing="0sp"
+            android:horizontalSpacing="0sp"
+            android:dividerHeight="0sp"
+            android:divider="#FFF"
+            android:background="#F2F2F2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="#FFF">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:text="Pagaré por adelantado la asistencia haciendo uso de mi tarjeta."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option1"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:checked="true"
+                android:enabled="false" />
+
+            <RadioButton
+                android:text="Pagaré en efectivo al momento de recibir la asistencia."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/option2"
+                android:layout_weight="1"
+                android:checked="true" />
+        </RadioGroup>
+
+        <TextView
+            android:text="Otros cargos podrían aplicarse en caso de que requieras un tipo de asistencia adicional no contemplada en esta solicitud."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView44"
+            android:layout_weight="1"
+            android:textStyle="normal|italic"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

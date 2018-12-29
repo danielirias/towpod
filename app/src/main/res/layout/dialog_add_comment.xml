@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        android:padding="15dp">
+
+        <TextView
+            android:text="Tu opinión ayudará a mejorar nuestros servicios."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView31"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textStyle="normal|bold"
+            android:textColor="?attr/colorPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:background="#FFF">
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine|textImeMultiLine|textLongMessage"
+                android:ems="10"
+                android:id="@+id/txtMyComment"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:maxLength="500"
+                android:layout_marginBottom="10sp"
+                android:lines="4"
+                android:hint="Escribe tu comentario"
+                android:gravity="top"
+                android:elevation="2dp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Danos tu calificación:"
+                android:id="@+id/textView18"
+                android:layout_below="@+id/txtComment"
+                android:layout_alignParentStart="true"
+                android:textAlignment="textStart"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+        <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rateBar"
+                android:numStars="5"
+                android:stepSize="1"
+                android:layout_below="@+id/textView18"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+</LinearLayout>

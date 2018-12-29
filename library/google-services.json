@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "317435339094",
+    "project_id": "helpmech-eabcf"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317435339094:android:4da1a1fd2ae454a9",
+        "android_client_info": {
+          "package_name": "danielirias.helpmech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317435339094-ta2atn7dbq6auqbg8rsuo6bvu5vu9j1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "danielirias.helpmech",
+            "certificate_hash": "23a4953c77d749cbca50fcd0e847bcd94b8dee30"
+          }
+        },
+        {
+          "client_id": "317435339094-5pc25fko20sb6gf7ukq9j18brsaqc29b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByEqIvnzUVpxsL0pSFGzz8aZ_7TtGbcQA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-52523789-3"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

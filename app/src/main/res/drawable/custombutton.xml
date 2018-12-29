@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/colorButtonNormal" /> <!-- default -->
+
+    <item android:state_pressed="true"
+        android:drawable="@color/colorButtonPressed"/> <!-- pressed -->
+
+    <item android:state_focused="true"
+        android:drawable="@color/colorButtonFocus"/> <!-- focused -->
+
+</selector>

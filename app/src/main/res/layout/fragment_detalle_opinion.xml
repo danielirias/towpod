@@ -1,0 +1,50 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f2f2f2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#f2f2f2">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="Comentar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnComentar"
+            android:textColor="#ffffff"
+            android:onClick="AddComment"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:text="Comparte tus comentarios acerca de este establecimiento."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView29"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/btnComentar" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/ListViewComentarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:verticalSpacing="0sp"
+        android:horizontalSpacing="0sp"
+        android:dividerHeight="0sp"
+        android:divider="#FFF"
+        android:background="#f2f2f2">
+    </ListView>
+
+
+    </LinearLayout>

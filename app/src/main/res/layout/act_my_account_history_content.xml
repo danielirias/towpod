@@ -1,0 +1,21 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f2f2f2">
+
+    <ListView
+        android:id="@+id/ListViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:verticalSpacing="0sp"
+        android:horizontalSpacing="0sp"
+        android:dividerHeight="0sp"
+        android:divider="#FFF"
+        android:background="#f2f2f2">
+    </ListView>
+
+
+</LinearLayout>

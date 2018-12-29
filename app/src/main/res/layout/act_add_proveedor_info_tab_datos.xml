@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contenedorDatosGenerales"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipToPadding="false">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="false"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollIndicators="top|bottom"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarFadeDuration="5000"
+        android:scrollbarDefaultDelayBeforeFade="5000">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <!--FIN DE LOS DATOS GENERALES-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10sp"
+                android:background="#FFF">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Información del establecimiento"
+                    android:id="@+id/textView356"
+                    android:textColor="?attr/colorPrimary"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:id="@+id/txtNombreNuevoProveedor"
+                    android:textColor="#35495c"
+                    android:layout_below="@+id/textView7"
+                    android:hint="Nombre del establecimiento"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:textColorHint="#AAAAAA"
+                    android:elevation="8dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:ems="10"
+                    android:id="@+id/txtDireccionNuevoProveedor"
+
+                    android:textColor="#35495c"
+                    android:layout_below="@+id/textView8"
+                    android:layout_alignParentStart="true"
+                    android:maxLength="255"
+                    android:hint="Dirección"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#AAAAAA" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDescripcion"
+
+                    android:textColor="#35495c"
+                    android:textAlignment="textStart"
+                    android:maxLength="500"
+                    android:layout_below="@+id/textView9"
+                    android:layout_alignParentStart="true"
+                    android:hint="Cuéntanos un poco acerca de este lugar"
+                    android:inputType="textCapSentences"
+                    android:layout_marginBottom="20dp"
+                    android:textColorHint="#AAAAAA" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Números de teléfono"
+                    android:id="@+id/textView10"
+                    android:textStyle="bold"
+                    android:enabled="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/txtTelefono"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    android:textColor="#35495c"
+                    android:phoneNumber="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtDescripcion"
+                    android:hint="Principal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="#AAAAAA" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/txtTelefonoSecundario"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    android:textColor="#35495c"
+                    android:phoneNumber="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtDescripcion"
+                    android:hint="Secundario"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="#AAAAAA" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/txtTelefonoAdicional"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    android:textColor="#35495c"
+                    android:phoneNumber="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtDescripcion"
+                    android:hint="Adicional"
+                    android:layout_marginBottom="10dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="#AAAAAA" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtSitioWeb"
+                    android:hint="www.tusitioweb.com"
+                    android:textColorHint="#AAAAAA"
+                    android:inputType="textUri" />
+            </LinearLayout>
+            <!--FIN DE LOS DATOS GENERALES-->
+
+            <!--INICIO DE LOS HORARIOS DE ATENCION-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10sp"
+                android:background="#FFF"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Horarios de atención"
+                    android:id="@+id/textView3"
+                    android:textColor="?attr/colorPrimary"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LayoutHorariosMonFri"
+                android:clipToPadding="false">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/BloqueDias"
+                    android:padding="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Lunes - Viernes"
+                        android:id="@+id/textView6"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/BloqueHorarios"
+                    android:padding="5dp"
+                    android:clipToPadding="false">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="2dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Establecer"
+                            android:id="@+id/btnSetHorarioMonFri"
+                            android:onClick="btnSetHorarioMonFri"
+                            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:elevation="6dp" />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LayoutHorariosSat">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/BloqueDiasSat"
+                    android:padding="10sp"
+                    android:minHeight="20sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Sábado"
+                        android:id="@+id/txtHorarioSat"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/BloqueHorariosSat"
+                    android:padding="5dp"
+                    android:clipToPadding="false">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="2dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Establecer"
+                            android:id="@+id/btnSetHorariosSabado"
+                            android:onClick="btnSetHorariosSabado"
+                            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                            android:elevation="6dp" />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LayoutHorariosSun">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/BloqueDiasSun"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Domingo"
+                        android:id="@+id/txtHorarioSun"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/BloqueHorariosSun"
+                    android:padding="5dp"
+                    android:clipToPadding="false">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:elevation="2dp" >
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Establecer"
+                            android:id="@+id/btnSetHorariosDomingo"
+                            android:onClick="btnSetHorariosDomingo"
+                            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                            android:elevation="6dp" />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--FIN DE LOS HORARIOS DE ATENCION-->
+
+            <!--INICIO DE LOS METODOS DE PAGO-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Métodos de pago aceptados"
+                        android:id="@+id/textView24"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textView24"
+                    android:layout_alignParentStart="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loCard">
+
+                        <RelativeLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:src="@drawable/paymentcard"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/swCard"
+                                android:layout_gravity="center_horizontal"
+                                android:onClick="swCard"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Tarjeta C/D"
+                                android:id="@+id/textView25"
+                                android:textAlignment="center"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageView6"
+                                android:layout_marginStart="15dp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loCash">
+
+                        <RelativeLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:src="@drawable/paymentcash"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/swCash"
+                                android:layout_gravity="center_horizontal"
+                                android:onClick="swCash"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Efectivo"
+                                android:id="@+id/textView26"
+                                android:textAlignment="center"
+                                android:layout_marginStart="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageView7" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loCheck">
+
+                        <RelativeLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:src="@drawable/paymentcheck"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/swCheck"
+                                android:layout_gravity="center_horizontal"
+                                android:onClick="swCheck"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Cheque"
+                                android:id="@+id/textView27"
+                                android:textAlignment="center"
+                                android:layout_marginStart="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageView8" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--FIN DE LOS METODOS DE PAGO-->
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

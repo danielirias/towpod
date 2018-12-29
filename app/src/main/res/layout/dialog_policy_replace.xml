@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ya tienes un servicio de asistencia asociado con tu vehículo:"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicio actual:"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/txtNombrePolizaExistente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Nombre del servicio actual" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Deseas remplazar tu servicio actual por la siguiente?"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/txtNuevaPoliza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre nuevo servicio"
+            android:textColor="?attr/colorAccent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

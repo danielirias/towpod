@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "123041608457",
+    "firebase_url": "https://towpod-app.firebaseio.com",
+    "project_id": "towpod-app",
+    "storage_bucket": "towpod-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123041608457:android:42daac992fa8fdbc",
+        "android_client_info": {
+          "package_name": "net.towpod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123041608457-1m2dj4i9b10ucq7o0o0jamk9ligl3vun.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.towpod",
+            "certificate_hash": "6688d11c5a6bbf4a148dd536037efa905121e9ee"
+          }
+        },
+        {
+          "client_id": "123041608457-7bmbfnpttsd54phaugpstgo9skm2jup3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE6swdEofpATniz58JqWp3x_6w508cYl0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123041608457-7bmbfnpttsd54phaugpstgo9skm2jup3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

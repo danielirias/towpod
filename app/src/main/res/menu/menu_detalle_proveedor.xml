@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="net.towpod.DetalleProveedor">
+    <item
+        android:id="@+id/itemComentar"
+        android:orderInCategory="100"
+        android:title="Comentar y opinar"
+        android:icon="@drawable/message"
+        app:showAsAction="never|withText"/>
+        <!--app:showAsAction="ifRoom|withText"-->
+
+    <item
+        android:id="@+id/itemReportar"
+        android:orderInCategory="100"
+        android:title="Reportar inexistente"
+        android:icon="@drawable/wrong"
+        app:showAsAction="never|withText" />
+
+    <item
+        android:id="@+id/menuAbout"
+        android:orderInCategory="100"
+        android:title="Acerca de"
+        android:icon="@drawable/chat"
+        app:showAsAction="never|withText"/>
+</menu>

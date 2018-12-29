@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        android:padding="15dp">
+
+        <TextView
+            android:text="Vehículos disponibles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="?attr/colorPrimary"
+            android:id="@+id/textView30"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:text="Selecciona el vehículo:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView31"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/loNoCars"
+        android:padding="15dp"
+        android:background="#FFF">
+
+        <TextView
+            android:text="Tu solicitud no puede ser realizada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView38"
+            android:textAppearance="@android:style/TextAppearance.Material.Small"
+            android:textStyle="normal|bold"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:text="Registra tu vehículo y vuelve a intentarlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView43"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="normal|bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Registrar vehículo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:onClick="MostrarRegistroDeVehiculo"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:fontFamily="sans-serif-small"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+        <GridView
+            android:id="@+id/ListViewAutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fastScrollEnabled="true"
+            android:verticalSpacing="0sp"
+            android:horizontalSpacing="0sp"
+            android:dividerHeight="0sp"
+            android:divider="#FFF"
+            android:background="#f2f2f2"
+            android:numColumns="2"></GridView>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/grupoAutos" />
+    </LinearLayout>
+
+
+</LinearLayout>

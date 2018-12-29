@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="net.towpod.DetalleProveedor">
+
+    <item android:title="Mi cuenta"
+        android:id="@+id/menuMyAccount"
+        android:icon="@drawable/menumyaccount"
+        />
+
+    <item
+        android:id="@+id/menuMyRecord"
+        android:title="Mis registros"
+        android:icon="@drawable/menumyrecords" />
+
+    <item android:title="Cerrar sesión"
+        android:id="@+id/menuLogout"
+        android:icon="@drawable/menulogout" />
+    <item
+        android:id="@+id/menuAbout"
+        android:title="Acerca de"
+        android:icon="@drawable/menuabout" />
+
+    <!--app:showAsAction="ifRoom|withText"-->
+
+
+</menu>

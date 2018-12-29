@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView60"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:text="Mueve el mapa hasta que el centro del marcador indique el destino que deseas."
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/mainRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Image View that acts as map marker notice centerInParent-->
+
+        <RelativeLayout
+            android:id="@+id/lo_map_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnNext">
+
+            <!-- Image View that acts as map marker notice centerInParent-->
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/confirm_address_map_custom_marker"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/target" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:onClick="getBestProviders"
+            android:text="Continuar" />
+
+    </RelativeLayout>
+
+</LinearLayout>

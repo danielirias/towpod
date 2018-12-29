@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#bec3c7"
+                    android:id="@+id/LayoutTitulo">
+
+                    <RelativeLayout
+                        android:layout_width="80sp"
+                        android:layout_height="80sp"
+                        android:id="@+id/rlCatIcon"
+                        android:background="@drawable/customcatbg"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imgIconoCategoria" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".66"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/txtUnidad"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/LayOutButtons"
+                            android:layout_below="@+id/textView28"
+                            android:layout_alignParentEnd="true">
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:id="@+id/loCall">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="5dp">
+
+                                    <Button
+                                        style="@style/Widget.AppCompat.Button.Colored"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Llamar"
+                                        android:id="@+id/btnPhoneCall"
+
+                                        android:textColor="#FFFFFF"
+                                        android:onClick="MakePhoneCall"
+                                        android:layout_below="@+id/textView28"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginTop="10dp"
+                                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/loMessage"
+                                android:layout_weight=".5">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="5dp">
+
+                                    <Button
+                                        style="@style/Widget.AppCompat.Button.Colored"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sitio web"
+                                        android:id="@+id/btnWebSite"
+                                        android:layout_marginTop="10dp"
+
+                                        android:textColor="#FFFFFF"
+                                        android:onClick="GoToWebSite"
+                                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#bec3c7"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:id="@+id/txtNombreProveedor"
+                        android:shadowColor="#212121"
+                        android:text="Nombre"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="Categoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNombreCategoria" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/txtDireccion"
+                        android:text="Dirección"
+                        android:layout_below="@+id/txtNombreProveedor"
+                        android:layout_alignStart="@+id/txtNombreProveedor"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/txtCiudad"
+                            android:text="Ciudad"
+                            android:textColor="?attr/colorAccent"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/txtDireccion"
+                            android:layout_alignLeft="@+id/txtDireccion"
+                            android:layout_alignStart="@+id/txtDireccion"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/txtDistancia"
+                            android:text="0KM"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/textView28"
+                            android:layout_toEndOf="@+id/textView28" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/LayoutHorario">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:text="Horarios de atención"
+                            android:id="@+id/Label0"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="5sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="?attr/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/Label1"
+                            android:text="Lunes - Viernes"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/Label0"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="?attr/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtNumeroPoliza"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_gravity="right"
+                            android:text="00:00"
+                            android:layout_below="@+id/Label0"
+                            android:layout_alignLeft="@+id/txtEstadoPoliza"
+                            android:layout_alignStart="@+id/txtEstadoPoliza" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/Label2"
+                            android:text="Sábados"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/Label1"
+                            android:textColor="?attr/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtEstadoPoliza"
+                            android:text="00:00"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_gravity="right"
+                            android:layout_below="@+id/Label1"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/lblSunday"
+                            android:text="Domingos"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_below="@+id/Label2"
+                            android:textColor="?attr/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtTimeSun"
+                            android:text="00:00"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_gravity="right"
+                            android:layout_below="@+id/Label2"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10sp"
+                    layout="@layout/tab_detalle_comentarios"
+                    android:id="@+id/LayoutIntro">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/txtIntro"
+                        android:text="..." />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
